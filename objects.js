@@ -1,4 +1,4 @@
-var object = plqylist ({});
+var object = playList ({});
 
 var obj = { prop: 1 }
 function updateObjectWithKeyAndValue(playList, artistName,songTitle ){
