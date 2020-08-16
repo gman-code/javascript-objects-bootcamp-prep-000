@@ -1,7 +1,7 @@
 var object = plqylist ({});
 
 var obj = { prop: 1 }
-function updateObjectWithKeyAndValue(playList, arti, value){
+function updateObjectWithKeyAndValue(playList, artistName, ){
   return Object.assign({}, obj, {[key]: value})
 };
 function destructivelyUpdateObjectWithKeyAndValue(object, key, value){
