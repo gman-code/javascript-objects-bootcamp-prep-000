@@ -1,19 +1,18 @@
-var object = playList ({});
+var playlist = {
+  artist1: "song1",
+  artist2: "song2",
+  artist3: "song3"
+};
 
-var obj = { prop: 1 }
-function updateObjectWithKeyAndValue(playList, artistName,songTitle ){
-  return playList.assign({},playList, {[artistName]: songTitle})
-};
-function destructivelyUpdateObjectWithKeyAndValue(pl, key, value){
-  object[key] = value
-  return object
-};
-var newObj = Object.assign({}, obj);
-function deleteFromObjectByKey(object, key){
-  delete newObj[key];
-  return newObj
-};
-function destructivelyDeleteFromObjectByKey(object, key){
-  delete object[key]
-  return object
+function updatePlaylist(thePlaylist, artistName, songTitle) {
+  return Object.assign({}, thePlaylist, { [artistName]: songTitle});
 }
+
+updatePlaylist(playlist, "artist4", "song4");
+
+function removeFromPlaylist(thePlaylist, artistName) {
+  delete thePlaylist[artistName];
+  return thePlaylist;
+}
+
+removeFromPlaylist(playlist, "artist2");
